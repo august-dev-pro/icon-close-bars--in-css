@@ -1,0 +1,51 @@
+.icon-close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-close::before,
+.icon-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 1px;
+  background-color: black; /* Changez la couleur ici */
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.icon-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.icon-close:hover::before {
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.icon-close:hover::after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+/* icon-bars */
+.bars-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 23px;
+  cursor: pointer;
+}
+.bars-icon .bar {
+  width: 100%;
+  height: 1px;
+  padding: 0.5px 0;
+  background-color: black;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
